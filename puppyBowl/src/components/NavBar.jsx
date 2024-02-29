@@ -8,7 +8,7 @@ export default function NavBar() {
 			<div id='navbar'>
 				<Link to='/'>Home</Link>
 				<Link to={`/players/${id}`}>Random Player</Link>
-				{/* <Link to='/newPlayerForm'>Add New Player</Link> */}
+				<Link to='/newPlayerForm'>Add New Player</Link>
 			</div>
 		</>
 	);

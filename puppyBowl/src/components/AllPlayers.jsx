@@ -1,5 +1,6 @@
 import { useGetPlayersQuery } from '../API/playerSlice';
-import NewPlayerForm from './NewPlayerForm';
+import { useNavigate } from 'react-router-dom';
+// import NewPlayerForm from './NewPlayerForm';
 
 export default function AllPlayers() {
 	// const dummyPlayers = [
@@ -43,11 +44,12 @@ export default function AllPlayers() {
 
 	const { data, isLoading } = useGetPlayersQuery();
 	console.log(data?.data?.players);
+	const navigate = useNavigate();
 
 	return (
 		<>
 			<h2>All players</h2>
-			<NewPlayerForm />
+			{/* <NewPlayerForm /> */}
 			<h3>Roster</h3>
 			{!isLoading ? (
 				data?.data?.players.map((player) => (
@@ -56,7 +58,9 @@ export default function AllPlayers() {
 						<p>{player.breed}</p>
 						<img src={player.imageUrl} alt={`${player}'s image`} />
 						<br />
-						<button>View Details</button>
+						<button onClick={() => navigate(`players/${player.id}`)}>
+							View Details
+						</button>
 						<button>Remove</button>
 					</div>
 				))
