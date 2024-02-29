@@ -45,6 +45,13 @@ export default function AllPlayers() {
 			<h2>All players</h2>
 			<NewPlayerForm />
 			<h3>Roster</h3>
+			{dummyPlayers.map((player) => {
+				<div className='player-card'>
+					<h4>{player.name}</h4>
+					<p>{player.breed}</p>
+					<img src={player.imageUrl} alt='player image' />
+				</div>;
+			})}
 		</>
 	);
 }

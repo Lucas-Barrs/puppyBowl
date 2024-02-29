@@ -3,24 +3,28 @@ import { Form } from 'react-router-dom';
 export default function NewPlayerForm() {
 	return (
 		<>
-			<h2>New Player Form</h2>
-			<Form>
+			<h3>Add New Player</h3>
+			<form>
 				<label>
-					Player Name
+					Name:
 					<input
 						type='text'
-						name='name'
-						value={inputs.name}
-						onChange={(e) => setName(e.target.value)}
+						name='player-name'
+						id='player-name'
+						placeholder='Name'
+						// value={inputs.name}
+						// onChange={(e) => setName(e.target.value)}
 					/>
 				</label>
 				<label>
 					Puppy Breed
 					<input
 						type='text'
-						name='breed'
-						value={inputs.breed}
-						onChange={(e) => setBreed(e.target.value)}
+						name='player-breed'
+						id='player-breed'
+						placeholder='Breed'
+						// value={inputs.breed}
+						// onChange={(e) => setBreed(e.target.value)}
 					/>
 				</label>
 				<label>
@@ -28,11 +32,13 @@ export default function NewPlayerForm() {
 					<input
 						type='text'
 						name='imageUrl'
-						value={inputs.Url}
-						onChange={(e) => setImg(e.target.value)}
+						id='player-imgage'
+						// value={inputs.Url}
+						// onChange={(e) => setImg(e.target.value)}
 					/>
 				</label>
-			</Form>
+				<button>Submit</button>
+			</form>
 		</>
 	);
 }
