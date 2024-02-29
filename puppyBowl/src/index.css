@@ -1,1 +1,131 @@
+h1{
+  text-align: center;
+}
+/* #players {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+}
 
+.player {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #f60303;
+  border-radius: 5px;
+} */
+html{
+  background-color: rgba(209, 253, 165, 0.933);
+}
+
+img {
+  max-width: 40%;
+  max-height: auto;
+}
+
+h2 {
+text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+
+
+}
+li {
+  list-style-type: none;
+  flex: 1 1 300px;
+  border: 5px solid black;
+  width: 200px;
+  margin: 10px;
+  background-color: rgb(249, 242, 149);
+}
+.form{
+  /* border: 5px solid blue; */
+  padding: 30px;
+  background-color:darkseagreen;
+  align-content: flex-end;
+}
+
+button{
+ margin: 5px;
+
+} 
+button:hover {
+  -webkit-animation:rainbow 1s infinite;
+  -ms-animation:rainbow 1s infinite;
+  -o-animation:rainbow 1s infinite;
+  animation:rainbow 1s infinite;
+  }
+  @-webkit-keyframes rainbow {
+  0% {color: #ff0000;}
+  10% {color: #ff8000;}
+  20% {color: #ffff00;}
+  30% {color: #80ff00;}
+  40% {color: #00ff00;}
+  50% {color: #00ff80;}
+  60% {color: #00ffff;}
+  70% {color: #0080ff;}
+  80% {color: #0000ff;}
+  90% {color: #8000ff;}
+  100% {color: #ff0080;}
+  }
+  @-ms-keyframes rainbow {
+  0% {color: #ff0000;}
+  10% {color: #ff8000;}
+  20% {color: #ffff00;}
+  30% {color: #80ff00;}
+  40% {color: #00ff00;}
+  50% {color: #00ff80;}
+  60% {color: #00ffff;}
+  70% {color: #0080ff;}
+  80% {color: #0000ff;}
+  90% {color: #8000ff;}
+  100% {color: #ff0080;}
+  }
+  @-o-keyframes rainbow {
+  0% {color: #ff0000;}
+  10% {color: #ff8000;}
+  20% {color: #ffff00;}
+  30% {color: #80ff00;}
+  40% {color: #00ff00;}
+  50% {color: #00ff80;}
+  60% {color: #00ffff;}
+  70% {color: #0080ff;}
+  80% {color: #0000ff;}
+  90% {color: #8000ff;}
+  100% {color: #ff0080;}
+  }
+  @keyframes rainbow {
+  0% {color: #ff0000;}
+  10% {color: #ff8000;}
+  20% {color: #ffff00;}
+  30% {color: #80ff00;}
+  40% {color: #00ff00;}
+  50% {color: #00ff80;}
+  60% {color: #00ffff;}
+  70% {color: #0080ff;}
+  80% {color: #0000ff;}
+  90% {color: #8000ff;}
+  100% {color: #ff0080;}
+  }
+  #navbar {
+    padding: 2em;
+    justify-content: space-evenly;
+  }
+  #container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #container > div {
+    display: flex;
+  }
