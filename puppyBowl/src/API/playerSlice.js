@@ -9,9 +9,12 @@ export const playersApi = createApi({
   }),
   endpoints: (builder) => ({
     getPlayers: builder.query({
-      query: () => '/players',
+      query: () => `/players`,
+    }),
+    getSinglePlayer: builder.query({
+     query: (id) => `/players/${id}`
     })
   })
 })
 
-export const { useGetPlayersQuery } = playersApi
+export const { useGetPlayersQuery, useGetSinglePlayerQuery} = playersApi
