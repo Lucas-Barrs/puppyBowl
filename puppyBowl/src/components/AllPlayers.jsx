@@ -59,7 +59,7 @@ export default function AllPlayers() {
 			{/* <h3>Roster</h3> */}
 			{!isLoading ? (
 				data?.data?.players.map((player) => (
-					<div key={player.id} className='players'>
+					<div key={player.id} class='players'>
 						<h4>{player.name}</h4>
 						<br></br>
 						<p>{player.breed}</p>

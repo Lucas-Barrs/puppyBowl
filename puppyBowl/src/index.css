@@ -2,13 +2,14 @@ h1{
   text-align: center;
 }
 #players {
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
   list-style: none;
   padding: 0;
 }
 
-.player {
+.players {
+  justify-content: space-evenly;
   flex: 1 1 300px;
   max-width: 400px;
   margin: 10px;
@@ -57,7 +58,7 @@ li {
 
 button{
  margin: 5px;
-
+background-color: #ba7df6;
 } 
 button:hover {
   -webkit-animation:rainbow 1s infinite;
@@ -128,13 +129,4 @@ button:hover {
   }
   #container > div {
     display: flex;
-  }
-  .player-card{
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 400px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #f60303;
-    border-radius: 5px;
   }
