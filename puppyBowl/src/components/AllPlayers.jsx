@@ -1,4 +1,7 @@
-import { useGetPlayersQuery } from '../API/playerSlice';
+import {
+	useGetPlayersQuery,
+	useDeletePlayerMutation,
+} from '../API/playerSlice';
 import { useNavigate } from 'react-router-dom';
 // import NewPlayerForm from './NewPlayerForm';
 
@@ -44,24 +47,35 @@ export default function AllPlayers() {
 
 	const { data, isLoading } = useGetPlayersQuery();
 	console.log(data?.data?.players);
+
+	const [deletePlayer, result] = useDeletePlayerMutation();
+
 	const navigate = useNavigate();
 
 	return (
 		<>
 			<h2>All players</h2>
 			{/* <NewPlayerForm /> */}
-			<h3>Roster</h3>
+			{/* <h3>Roster</h3> */}
 			{!isLoading ? (
 				data?.data?.players.map((player) => (
-					<div key={player.id} className='player-card'>
+					<div key={player.id} className='players'>
 						<h4>{player.name}</h4>
+						<br></br>
 						<p>{player.breed}</p>
+						<br></br>
 						<img src={player.imageUrl} alt={`${player}'s image`} />
 						<br />
 						<button onClick={() => navigate(`players/${player.id}`)}>
 							View Details
 						</button>
-						<button>Remove</button>
+						<button
+							onClick={async () => {
+								await deletePlayer(player.id);
+								refetch();
+							}}>
+							Remove
+						</button>
 					</div>
 				))
 			) : (

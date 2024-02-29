@@ -1,7 +1,7 @@
 h1{
   text-align: center;
 }
-/* #players {
+#players {
   display: flex;
   flex-flow: row wrap;
   list-style: none;
@@ -15,7 +15,7 @@ h1{
   padding: 10px;
   border: 1px solid #f60303;
   border-radius: 5px;
-} */
+}
 html{
   background-color: rgba(209, 253, 165, 0.933);
 }
